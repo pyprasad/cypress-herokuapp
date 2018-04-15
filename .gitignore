@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+scree/
+.DS_Store
+.idea
+.idea/
+*.orig
+.vscode/
+*.log
+*.log.*
