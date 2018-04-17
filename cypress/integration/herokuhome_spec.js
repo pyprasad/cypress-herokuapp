@@ -10,6 +10,21 @@ describe('Herokuapp testing', ()=> {
 
         it('contains header',()=>{
             cy.contains('Available Examples');
-        })
+        });
+
+        //Select value form a drop down
+        describe('Navigate to dropdown page',()=>{
+            beforeEach('click on the Dropdown page',()=>{
+                cy.get('#content > ul > li').contains('Dropdown').click();
+            });
+
+            afterEach('Navigate back to Home page', ()=>{
+                cy.go('back');
+            });
+
+            it('Select Option from dropdown',()=>{
+                cy.get('#dropdown').select('Option 1');
+            })
+        });
     });
 });
