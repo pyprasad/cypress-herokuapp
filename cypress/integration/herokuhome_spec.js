@@ -5,6 +5,8 @@ describe('Herokuapp testing', ()=> {
         });
 
         it('contains header',()=>{
+            cy.log("------------------------");
+            cy.log(Cypress.config("auth_url"));
             cy.contains('Welcome to the-internet');
         });
 
